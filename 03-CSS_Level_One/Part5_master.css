@@ -2,13 +2,13 @@
 /*https://designshack.net/articles/css/what-the-heck-is-css-specificity/*/
 
 li{
-  color: red;
+  color:red;
 }
 
 .TopItems{
-  color: blue;
+  color:blue;
 }
 
 #two{
-  border: 2px solid black;
+  border: 3px black solid;
 }
