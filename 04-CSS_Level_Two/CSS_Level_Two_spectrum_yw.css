@@ -1,0 +1,40 @@
+
+
+
+h1{
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-align: center;
+}
+
+.art{
+  margin:auto;
+}
+
+td{
+  height: 300px;
+  width: 100px;
+  padding: 100px;
+  border: 10px white solid;
+
+
+}
+
+#one{
+  background-color: #264653;
+}
+
+#two{
+  background-color: #2A9D8F;
+}
+
+#three{
+  background-color: #E9C46A
+}
+
+#four{
+  background-color: #F4A261
+}
+
+#five{
+  background-color: #E76F51
+}
