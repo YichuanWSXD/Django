@@ -22,7 +22,15 @@
 
 def arrayCheck(nums):
     # CODE GOES HERE
-
+    cur_num = 1
+    for num in nums:
+        if num == cur_num:
+            cur_num += 1
+        elif num == 1:
+            cur_num = 2
+        if cur_num == 4:
+            return True
+    return False
 
 #####################
 ## -- PROBLEM 2 -- ##
@@ -38,6 +46,7 @@ def arrayCheck(nums):
 # stringBits('Heeololeo') → 'Hello'
 
 def stringBits(str):
+    return str[::2]
   # CODE GOES HERE
 
 
@@ -60,6 +69,13 @@ def stringBits(str):
 
 def end_other(a, b):
   # CODE GOES HERE
+  a = a.lower()
+  b = b.lower()
+  if len(a) == len(b):
+      return a == b
+  if len(a) < len(b):
+      return b[-len(a):] == a
+  return a[-len(b):] == b
 
 #####################
 ## -- PROBLEM 4 -- ##
@@ -74,6 +90,7 @@ def end_other(a, b):
 
 def doubleChar(str):
   # CODE GOES HERE
+  return ''.join([char * 2 for char in str])
 
 
 #####################
@@ -99,7 +116,11 @@ def doubleChar(str):
 
 def no_teen_sum(a, b, c):
   # CODE GOES HERE
+  return fix_teen(a) + fix_teen(b) + fix_teen(c)
 def fix_teen(n):
+    if 13 <= n <= 19 and n != 15 and n != 16:
+        return 0
+    return n
   # CODE GOES HERE
 
 #####################
@@ -116,3 +137,4 @@ def fix_teen(n):
 
 def count_evens(nums):
   # CODE GOES HERE
+  return sum([1 for num in nums if num % 2 == 0])
