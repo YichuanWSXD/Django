@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 {% load static %}
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Django Page</title>
-    <link rel="stylesheet" href="{% static 'css/my_style.css' %}">
+    <title>Django Level Two</title>
+    <link rel="stylesheet" href="{% static 'css/my_style2.css' %}">
+
   </head>
   <body>
-    <h1>Hello this is index.html!</h1>
-    <h2>Below is an image of Django (not artist)</h2>
-    <img src="{% static 'images/django.jpg' %}" alt="Uh Oh, it didn't work">
-    <!-- {{ insert_me }} -->
+    <h1>Hi Welcome to Django Level Two!</h1>
+    <h2>Here are your access records:</h2>
+
+    <div class="djangtwo">
+      {% if access_records %}
+        <table>
+          <thead>
+            <th>Site Name</th>
+            <th>Date Accessed</th>
+          </thead>
+
+          {% for acc in access_records %}
+          <tr>
+            <td>{{ acc.name }}</td>
+            <td>{{ acc.date }}</td>
+          </tr>
+          {% endfor %}
+
+
+        </table>
+      {% else %}
+        <p>NO ACCESS RECORDS FOUND!</p>
+      {% endif %}
+
+
+
+
+    </div>
+
+
   </body>
 </html>
